@@ -1,11 +1,12 @@
 package web_hiber.model;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.*;
+
 
 /**
  * Представляет сущность User для хранения информации о пользователях в базе данных.
