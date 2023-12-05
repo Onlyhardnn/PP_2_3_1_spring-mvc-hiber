@@ -7,7 +7,10 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
-
+/**
+ * Представляет сущность User для хранения информации о пользователях в базе данных.
+ * Используется для взаимодействия с таблицей "users".
+ */
 @Setter
 @Getter
 @NoArgsConstructor
@@ -26,6 +29,13 @@ public class User {
 
     private String email;
 
+    /**
+     * Создает новый экземпляр User.
+     *
+     * @param name    Имя пользователя
+     * @param surname Фамилия пользователя
+     * @param email   Электронная почта пользователя
+     */
     public User(String name, String surname, String email) {
         this.name = name;
         this.surname = surname;
