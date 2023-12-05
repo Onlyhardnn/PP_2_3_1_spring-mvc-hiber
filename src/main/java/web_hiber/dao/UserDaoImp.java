@@ -9,16 +9,30 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
+/**
+ * Реализация интерфейса UserDao.
+ * Использует JPA EntityManager для взаимодействия с базой данных.
+ */
 @Repository
 public class UserDaoImp implements UserDao {
 
     private final EntityManagerFactory emf;
 
+    /**
+     * Создает новый объект UserDaoImp с заданным EntityManagerFactory.
+     *
+     * @param emf Используется для создания EntityManager для взаимодействия с базой данных
+     */
     @Autowired
     public UserDaoImp(EntityManagerFactory emf) {
         this.emf = emf;
     }
 
+    /**
+     * Добавляет нового пользователя в базу данных.
+     *
+     * @param user Пользователь для добавления
+     */
     @Override
     public void add(User user) {
         EntityManager em = emf.createEntityManager();
@@ -28,6 +42,11 @@ public class UserDaoImp implements UserDao {
         em.close();
     }
 
+    /**
+     * Обновляет существующего пользователя в базе данных.
+     *
+     * @param user Пользователь с обновленными данными
+     */
     @Override
     public void update(User user) {
         EntityManager em = emf.createEntityManager();
@@ -37,6 +56,11 @@ public class UserDaoImp implements UserDao {
         em.close();
     }
 
+    /**
+     * Удаляет пользователя из базы данных по его ID.
+     *
+     * @param id ID пользователя для удаления
+     */
     @Override
     public void delete(Long id) {
         EntityManager em = emf.createEntityManager();
@@ -49,6 +73,11 @@ public class UserDaoImp implements UserDao {
         em.close();
     }
 
+    /**
+     * Получает список всех пользователей из базы данных.
+     *
+     * @return Список всех пользователей
+     */
     @Override
     public List<User> getAllUsers() {
         EntityManager em = emf.createEntityManager();
