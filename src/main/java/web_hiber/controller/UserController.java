@@ -1,5 +1,6 @@
 package web_hiber.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,7 @@ public class UserController {
      *
      * @param userService Используется для выполнения операций с пользователями
      */
+    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }

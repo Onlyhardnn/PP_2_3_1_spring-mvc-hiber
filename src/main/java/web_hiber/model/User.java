@@ -23,10 +23,13 @@ public class User {
     @Column
     private Long id;
 
+    @Column
     private String name;
 
+    @Column
     private String surname;
 
+    @Column
     private String email;
 
     /**
