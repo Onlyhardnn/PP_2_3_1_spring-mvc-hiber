@@ -2,7 +2,8 @@
 ___
 ![task.png](image/task.png)
 ___
-## Демонстрация функционала
+- Приложение было перенесено на spring boot ✅
+### Демонстрация функционала
 ![project_work.gif](image/project_work.gif)
 ___
 ![condition.png](image/condition.png)
