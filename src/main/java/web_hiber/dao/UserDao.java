@@ -4,7 +4,10 @@ import web_hiber.model.User;
 
 import java.util.List;
 
-// CRUD методы по ТЗ
+/**
+ * Интерфейс для взаимодействия с данными пользователя.
+ * Определяет основные операции CRUD (create, read, update, delete).
+ */
 public interface UserDao {
 
     void add(User user);

@@ -1,11 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, rgb(241, 233, 233), rgb(246, 229, 229));
 }
 
 h1 {
-    color: #333;
+    color: #4f4b4b;
+    text-align: center;
 }
 
 table {
