@@ -47,7 +47,7 @@ public class WebConfig implements WebMvcConfigurer {
         registry.viewResolver(resolver);
     }
 
-    // для работы с css
+    // for css files
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
