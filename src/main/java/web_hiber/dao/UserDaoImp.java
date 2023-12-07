@@ -13,7 +13,7 @@ import java.util.List;
 public class UserDaoImp implements UserDao {
 
     @PersistenceContext
-    private EntityManager em;
+    private EntityManager entityManager;
 
     /**
      * Добавляет нового пользователя в базу данных.
@@ -22,7 +22,7 @@ public class UserDaoImp implements UserDao {
      */
     @Override
     public void add(User user) {
-        em.persist(user);
+        entityManager.persist(user);
     }
 
     /**
@@ -32,7 +32,7 @@ public class UserDaoImp implements UserDao {
      */
     @Override
     public void update(User user) {
-        em.merge(user);
+        entityManager.merge(user);
     }
 
     /**
@@ -42,9 +42,9 @@ public class UserDaoImp implements UserDao {
      */
     @Override
     public void delete(Long id) {
-        User user = em.find(User.class, id);
+        User user = entityManager.find(User.class, id);
         if (user != null) {
-            em.remove(user);
+            entityManager.remove(user);
         }
     }
 
@@ -55,7 +55,7 @@ public class UserDaoImp implements UserDao {
      */
     @Override
     public List<User> getAllUsers() {
-        TypedQuery<User> query = em.createQuery("SELECT u FROM users u", User.class);
+        TypedQuery<User> query = entityManager.createQuery("SELECT u FROM users u", User.class);
         return query.getResultList();
     }
 }
