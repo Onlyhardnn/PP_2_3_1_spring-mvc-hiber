@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
-
 /**
  * Представляет сущность User для хранения информации о пользователях в базе данных.
  * Используется для взаимодействия с таблицей "users".
